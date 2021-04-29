@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .no-js #loader { display: none;  }
+      .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+      .se-pre-con {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url(Preloader_21.gif) center no-repeat #fff;
+      }
+      .se-pre-con1 {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width:100%;
+        height:100%;
+        z-index: 9999;
+        background: url(Preloader_21.gif) center no-repeat #fff;
+      }
+
+      </style>
+      <!-------------------------------------------------------------------------------------->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+      <script src="../js/loading.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB9o6EtsUEaQGi1khD5sSV3OryIp0zgSFc",
+      authDomain: "one-click-research-solution.firebaseapp.com",
+      databaseURL: "https://one-click-research-solution.firebaseio.com",
+      projectId: "one-click-research-solution",
+      storageBucket: "one-click-research-solution.appspot.com",
+      messagingSenderId: "764441549973"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+  
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+      Research Dashboard
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <style>
+      #logoimg{
+        max-width: 230px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -15px;
+        display: block;
+      }
+    .logo{
+        background-color:  #083470;
+        height: 70px;
+      }
+    </style>
+</head>
+
+<body class="">
+    <div class="se-pre-con" id="loading"></div>
+  <div class="wrapper ">
+
+
+    <div class="sidebar" data-color="blue" data-background-color="white" data-image="../img/sidebar-1.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+    
+    <div class="logo">
+        <a href="https://www.hindujahospital.com/" target="_blank" class="brand-logo"><div id="logo" ><img id="logoimg" itemprop="logo" src="https://www.hindujahospital.com/images/hinduja-hospital-logo.svg" border="0" alt="P. D. Hinduja Hospital Mumbai" width="275" height="69"></div></a>
+  </div>
+  
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li class="nav-item ">
+                <a class="nav-link" href="./user.html">
+                  <i class="material-icons">person</i>
+                  <p>User Profile</p>
+                </a>
+              </li>
+          <li class="nav-item  ">
+            <a class="nav-link" href="./dashboard.html">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item active ">
+            <a class="nav-link"  href="./projects.html">
+              <i class="material-icons">content_paste</i>
+              <p>Projects</p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="./notifications.html">
+              <i class="material-icons">notifications</i>
+              <p>Notifications</p>
+            </a>
+          </li>
+          <li class="nav-item  ">
+            <a class="nav-link"  href="./proposal.html">
+              <i class="material-icons">dashboard</i>
+              <p>Submit Proposal</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="./submitBudget.html">
+              <i class="material-icons">dashboard</i>
+              <p>Submit Budget</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+              <a class="nav-link" href="./voucherintegrated.html ">
+                <i class="material-icons">dashboard</i>
+                <p>Vouchers</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="./viewguides.html ">
+                <i class="material-icons">dashboard</i>
+                <p>View Guides</p>
+              </a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel white">
+      <!-- Navbar -->
+    
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="javascript:window.location">Projects</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#pablo">
+                  <i class="material-icons">dashboard</i>
+                  <p class="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">notifications</i>
+                  <span class="notification">5</span>
+                  <p class="d-lg-none d-md-block">
+                    Some Actions
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" id="not1"></a>
+                  <a class="dropdown-item" id="not2"></a>
+                  <a class="dropdown-item"id="not3"></a>
+                  <a class="dropdown-item"id="not4"></a>
+                  <a class="dropdown-item"id="not5"></a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" id="ancLogout" href="#">Log out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+              <div class="card">
+                  <div class="card-header card-header-primary">
+                    <h4 class="card-title ">Your Projects</h4>
+                  </div>
+                  <div class="card-body">
+                      <div class="card">
+                          <div class="card-header card-header-primary">
+                            <h4 class="card-title ">Approved Projects</h4>
+                          </div>
+                          <div class="card-body">
+                              <div class="se-pre-con1" id="loading1"></div>
+
+                    <div class="table-responsive">
+      <table class="highlight table" id="projTable" cellpadding="50" cellspacing="50">
+          <th id="projID">Project ID</th>
+          <th>Project Name</th>
+          <th>Guide ID</th>
+          <th>Budget Proposed</th>
+          <th>Collaboration</th>
+          <th>View</th>
+        </table>
+      </div>
+        </div>
+      </div>
+      <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">Projects Dissaproved</h4>
+          </div>
+          <div class="card-body">
+
+    <div class="table-responsive">
+<table class="highlight table" id="pendprojTable" cellpadding="50" cellspacing="50">
+    <th>Project Name</th>
+    <th id="projID">Project ID</th>
+
+<th>Budget Proposed</th>
+<th>Guide ID</th>
+<th>Collaborators</th>
+</table>
+</div>
+</div>
+</div>
+          </div>
+          </div>
+          </div>
+          <div class ="row">
+            <div class="card">
+              <div class="card-header card-header-primary">
+                <h4 class="card-title ">Submitted Proposals</h4>
+              </div>
+              <div class="card-body">
+    
+        <div class="table-responsive">
+    <table class="highlight table" id="subpro" cellpadding="50" cellspacing="50">
+      <th> Submission Time</th>
+        <th>Document Name</th>
+        <th>Document Status</th>
+        <th>View</th>
+    </table>
+    </div>
+    </div>
+    </div>
+          </div>
+          <div class ="row">
+            <div class="card">
+              <div class="card-header card-header-primary">
+                <h4 class="card-title ">Submitted Budget Proposals</h4>
+              </div>
+              <div class="card-body">
+    
+        <div class="table-responsive">
+    <table class="highlight table" id="subbud" cellpadding="50" cellspacing="50">
+      <th> Submission Time</th>
+        <th>Document Name</th>
+        <th>Document Status</th>
+        <th>View</th>
+    </table>
+    </div>
+    </div>
+    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!--<div class="row">
+          <div class="card">
+              <div class="card-header card-header-primary">
+                <h4 class="card-title ">Finances</h4>
+              </div>
+              <div class="card-body">
+                  <div class="table-responsive">
+        <table class="table highlight" id="finTable" cellpadding="50" cellspacing="50">
+          <th>Project ID</th>
+          <th>Invoice No.</th>
+          <th>Sponsor Name</th>
+          <th>Amount Donated</th>
+        </table>
+        </div>
+        </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="card">
+              <div class="card-header card-header-primary">
+                <h4 class="card-title ">Approvals</h4>
+              </div>
+              <div class="card-body">
+                  <div class="table-responsive">
+        <table class="table highlight" id="appTable" cellpadding="50" cellspacing="50">
+          <th>Approval<br>docs<b>-></b></th>
+          <th>Proposal</th>
+          <th>progress<br>report<br>1</th>
+          <th>progress<br>report<br>2</th>
+          <th>progress<br>report<br>3</th>
+          <th>progress<br>report<br>4</th>
+          <th>progress<br>report<br>5</th>
+          <th>progress<br>report<br>6</th>
+          <th>progress<br>report<br>7</th>
+          <th>progress<br>report<br>8</th>
+          <th>progress<br>report<br>9</th>
+          <th>progress<br>report<br>10</th>
+          <th>progress<br>report<br>11</th>
+          <th>progress<br>report<br>12</th>
+          <th>Final<br>Submission</th>
+        </table>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+        
+        
+    </div>
+    </div>-->
+
+     
+
+      
+  <!--   Core JS Files   -->
+  <script src="../js/logout.js"></script>
+  <script src="../js/core/jquery.min.js"></script>
+  <script src="../js/core/popper.min.js"></script>
+  <script src="../js/core/bootstrap-material-design.min.js"></script>
+  <script src="../js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="../js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="../js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="../js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="../js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="../js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="../js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="../js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="../js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="../js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="../js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="../js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="../js/plugins/arrive.min.js"></script>
+
+  <!-- Chartist JS -->
+  <script src="../js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <!--<script src="../demo/demo.js"></script>-->
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+            $('.fixed-plugin .dropdown').addClass('open');
+          }
+
+        }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+          } else {
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      md.initDashboardPageCharts();
+
+    });
+  </script>
+  
+</body>
+
+</html>
+
+<script type="text/javascript" src="../js/student.js"></script>

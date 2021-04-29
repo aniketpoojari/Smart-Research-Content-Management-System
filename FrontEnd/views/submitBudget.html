@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .no-js #loader { display: none;  }
+      .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+      .se-pre-con {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url(Preloader_21.gif) center no-repeat #fff;
+      }
+      </style>
+      <!-------------------------------------------------------------------------------------->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+      <script src="../js/loading.js"></script>
+  <meta charset="utf-8" />
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB9o6EtsUEaQGi1khD5sSV3OryIp0zgSFc",
+      authDomain: "one-click-research-solution.firebaseapp.com",
+      databaseURL: "https://one-click-research-solution.firebaseio.com",
+      projectId: "one-click-research-solution",
+      storageBucket: "one-click-research-solution.appspot.com",
+      messagingSenderId: "764441549973"
+    };
+    firebase.initializeApp(config);
+  </script>
+          <script type="text/javascript" src="../js/student.js"></script>
+          <script type="text/javascript" src="../js/storedownload.js"></script>
+
+  <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Master   Dashboard
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans|Material+Icons">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <link href="../css/main.css" rel="stylesheet" />
+<style>
+           .autocomplete {
+       
+            position: relative;
+            display: inline-block;
+        }
+        .autocomplete-items {
+        position: absolute;
+        border: 1px solid #d4d4d4;
+        border-bottom: none;
+        border-top: none;
+        z-index: 99;
+        top: 100%;
+        left: 0;
+        right: 0;
+        }
+        .autocomplete-items div {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #fff; 
+        border-bottom: 1px solid #d4d4d4; 
+        }
+        .autocomplete-items div:hover {
+        background-color: #e9e9e9; 
+        }
+        .autocomplete-active {
+        background-color: DodgerBlue !important; 
+        color: #ffffff; 
+        }
+
+        </style>
+</head>
+
+<body class="">
+  <div class="wrapper text-dark">
+    <div class="sidebar" data-color="blue" data-background-color="white" data-image="../img/sidebar-1.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+          <div class="logo">
+            <a href="https://www.hindujahospital.com/" target="_blank" class="brand-logo"><div id="logo" ><img id="logoimg" itemprop="logo" src="https://www.hindujahospital.com/images/hinduja-hospital-logo.svg" border="0" alt="P. D. Hinduja Hospital Mumbai" width="275" height="69"></div></a>
+      </div>
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li class="nav-item ">
+                <a class="nav-link" href="./user.html">
+                  <i class="material-icons">person</i>
+                  <p>User Profile</p>
+                </a>
+              </li>
+          <li class="nav-item  ">
+            <a class="nav-link" href="./dashboard.html">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="./projects.html">
+              <i class="material-icons">content_paste</i>
+              <p>Projects</p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="./notifications.html">
+              <i class="material-icons">notifications</i>
+              <p>Notifications</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="./proposal.html">
+              <i class="material-icons">dashboard</i>
+              <p>Submit Proposal</p>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link"  href="./submitBudget.html">
+              <i class="material-icons">dashboard</i>
+              <p>Submit Budget</p>
+            </a>
+          </li>   
+          <li class="nav-item ">
+              <a class="nav-link" href="./voucherintegrated.html ">
+                <i class="material-icons">dashboard</i>
+                <p>Vouchers</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="./viewguides.html ">
+                <i class="material-icons">dashboard</i>
+                <p>View Guides</p>
+              </a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand " href="#pablo">Proposal </a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#pablo">
+                  <i class="material-icons">dashboard</i>
+                  <p class="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">notifications</i>
+                  <span class="notification">5</span>
+                  <p class="d-lg-none d-md-block">
+                    Some Actions
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" id="not1"></a>
+                  <a class="dropdown-item" id="not2"></a>
+                  <a class="dropdown-item"id="not3"></a>
+                  <a class="dropdown-item"id="not4"></a>
+                  <a class="dropdown-item"id="not5"></a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" href="#">Log out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid"></div>
+
+        <!--View Project Starts Here-->
+
+        <div class="row" id="viewprojects">
+            <div class="col-md-12">
+                    <fieldset id="form1" runat="server">  
+                            <div>   
+                                <h2 align="center">INTRAMURAL STUDIES<br><hr>BUDGET PROPOSAL FORM<hr></h2>             
+                            </div>  
+                                <table id="table1"; cellspacing="0" cellpadding="5%"; align="center" border="1">  
+                                   <tr>  
+                                          <td  align="right" class="style1">PROJECT CODE :</td>  
+                                          <td class="style1"><input id="1" type="text" name="Job Title" /></td> 
+                                          <td align="right" class="style1">Submitted on date: </td> 
+                                          <td class="style1"><input id="2" type="text" name="subdate" /></td>
+                                        </tr>  
+                                        <tr>  
+                                            <td align="right">Title of the study :</td>  
+                                            <td class="style1"><input id="3" type="text" name="tos" /></td>
+                                        </tr>  
+                                        <tr>  
+                                            <td align="right">Nature of Study:</td> 
+                                            <td>
+                                                <select id="4">
+                                                    <option value="DNB">DNB</option>
+                                                    <option value="MSc">MSc</option>
+                                                    <option value="PhD">PhD</option>
+                                                    <option value="Others">Others</option>
+                                                </select>
+                                            </td>   
+                                            
+                                        </tr>  
+                                        <tr>  
+                                          <td align="right">Name of Principal Investigator:</td>  
+                                          <td><input id="5" type="text" name="npi" /></td>  
+                                   </tr>  
+                                   <tr>  
+                                       <td align="right">Name of Co- Investigator:</td>  
+                                          <td><input id="6" type="text" name="nci" /></td>  
+                                        </tr>  
+                                        <tr>  
+                                            <td align="right">Duration of Study:</td>  
+                                            <td><input id="7" type="text" name="dos" /></td>  
+                                        </tr> 
+                                        <tr>  
+                                            <td align="right">No of patients sanctionedd for the study:</td>  
+                                            <td><input id="8" type="text" name="nps" /></td>  
+                                 </tr> 
+                                 <tr>  
+                                     <td align="right">Sponsored by:</td>  
+                                     <td><input id="9" type="text" name="spb" /></td>  
+                                    </tr>
+                                    <tr>  
+                                        <td align="right">Budget Estimate  (including point 9 to point 15):</td>  
+                                        <td><textarea id="10"  name="budes" /></textarea></td>  
+                                    </tr>
+                                    <tr>  
+                                        <td align="right">Budget Details (As applicable):</td>  
+                                        <td><textarea id="11"  name="buddet" /></textarea></td>  
+                                    </tr>
+                                    <tr>  
+                                        <td align="right"> Patient Travel Allowance/ Compensatory allowance:</td>  
+                                        <td><textarea id="12" name="pta" /></textarea></td>  
+                                    </tr>
+                                    <tr>  
+                                        <td align="right"> Total no of visits  per patient:</td>  
+                                        <td><input id="13" type="text" name="tnv" /></td>  
+                                    </tr>
+                                 <tr>  
+                                     <td align="right"> Rs. Per Visit patient:</td>  
+                                        <td><input id="14" type="text" name="rpv" /></td>  
+                                    </tr>
+                                    <tr>  
+                                        <td align="right"> Capital Equipment:</td>
+                                        
+                                        <td> Name:  <input id="15" type="text" name="nceqp" />
+                                            <td align="right"> Value Rs : <input id="16" type="text" name="valeqp" /></td>
+                                        
+                                        </tr>
+                                        <tr>  
+                                            <td align="right">Research Fellow/Clinical Asst : </td> 
+                                            <td>
+                                                <select id="17">
+                                                    <option value="In-house">In-house</option>
+                                                    <option value="New">New</option>
+                                                    <option value="N.A">N.A</option>
+                                                </select>
+                                            </td>        
+                                        </tr>
+                                        <tr>  
+                                            <td align="right">Salary Details <br>(Provide seperately if required) </td>
+                                 <tr>
+                                     <td align="right">Research Assistant</td> 
+                                     <td>Name : <input id="18" type="text" name="nrass" /><br>
+                                        <br>Study : <input id="19" type="text" name="rastudy" /><br>
+                                        <br>Salary : <input id="20" type="text" name="rasalary" /><br>
+                                        <br>Total : <input id="21" type="text" name="rasalary" /><br>
+                                    </td>
+                                </tr>    
+                            </tr>
+                            
+                        </table> 
+                        <br>  
+                        <table align="center" border="1">
+                            <tr>
+                                <th colspan="6">Investigations/Test(IPD or OPD)</th>
+                            </tr>
+                            <tr>
+                                <td>Screening patient / sample</td>
+                                <td>Existing Test</td>
+                                <td>No.of patients</td>
+                                        <td>Follow-up</td>
+                                        <td>Tariff Rs.</td>
+                                        <td>Total Amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="autocomplete" ><input id="22" type="text" name="scpa" /></div></td>
+                                        <td><input id="23" type="text" name="exite" /></td>
+                                        <td><input id="24" type="text" name="nopat" /></td>
+                                        <td>-</td>
+                                        <td><input id="25" type="text" name="tariff" /></td>
+                                        <td><input id="26" type="text" name="tamt" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input id="27" type="text" name="scpa" /></td>
+                                        <td><input id="28" type="text" name="exite" /></td>
+                                        <td><input id="29" type="text" name="nopat" /></td>
+                                        <td>-</td>
+                                        <td><input id="30" type="text" name="tariff" /></td>
+                                        <td><input id="31" type="text" name="tamt" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input id="32" type="text" name="scpa" /></td>
+                                        <td><input id="33" type="text" name="exite" /></td>
+                                        <td><input id="34" type="text" name="nopat" /></td>
+                                        <td>-</td>
+                                        <td><input id="35" type="text" name="tariff" /></td>
+                                        <td><input id="36" type="text" name="tamt" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Total for screening patient / sample</b></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>-</td>
+                                        <td></td>
+                                        <td><input id="37" type="text" name="tamt1" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="6">Enrolled patient (lab, imaging, bx, etc.)</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input id='38' type="text" name="scpa" /></td>
+                                        <td><input id="39"type="text" name="exite" /></td>
+                                        <td><input id="40"type="text" name="nopat" /></td>
+                                        <td>-</td>
+                                        <td><input id="41" type="text" name="tariff" /></td>
+                                        <td><input id="42" type="text" name="tamt" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input id="43" type="text" name="scpa" /></td>
+                                                    <td><input id="44" type="text" name="exite" /></td>
+                                                    <td><input id="45"type="text" name="nopat" /></td>
+                                                    <td>-</td>
+                                                    <td><input id="46" type="text" name="tariff" /></td>
+                                                    <td><input id="47"type="text" name="tamt" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input id="48" type="text" name="scpa" /></td>
+                                                    <td><input id="49" type="text" name="exite" /></td>
+                                                    <td><input id="50" type="text" name="nopat" /></td>
+                                                    <td>-</td>
+                                                    <td><input id="51" type="text" name="tariff" /></td>
+                                                    <td><input id="52" type="text" name="tamt" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Total for enrolled patients</b></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>-</td>
+                                                    <td></td>
+                                                    <td><input id="53" type="text" name="tamt1" /></td>
+                                                </tr>
+                                                <tr>
+                                                            <td><b>Total of I and II</b></td>
+                                                            <td><input id="54" type="text" name="tamt" /></td>
+                                                        <td><input id="55" type="text" name="tamt" /></td>
+                                                        <td>-</td>
+                                                        <td><input id="56" type="text" name="tamt" /></td>
+                                                        <td><input id="57" type="text" name="tamt1" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th colspan="6">(Note : Provide separate list as annexure if required)</th>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>(A)</th>
+                                                        <th>(B)</th>
+                                                        <th>(AxB)</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input id="58" placeholder="1)" type="text" ></td>
+                                                                        <td><input id="59" type="number"></td>
+                                                                        <td><input id="60" type="number"></td>
+                                                                        <td><input id="61" type="number"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><input id="62" placeholder="2)" type="text"></td>
+                                                                        <td><input id="63"type="number"></td>
+                                                                        <td><input id="64" type="number"></td>
+                                                                        <td><input id="65"type="number"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><input id="66" placeholder="3)" type="text"></td>
+                                                                        <td><input id="67"type="number"></td>
+                                                                        <td><input id="68" type="number"></td>
+                                                                        <td><input id="69" type="number"></td>    
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><input id="70" placeholder="Total" type="text"></td>
+                                                                        <td><input id="71" type="number"></td>
+                                                                        <td><input id="72" type="number"></td>
+                                                                        <td><input id="73" type="number"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="25">
+                                                                            <strong>( Note : Provide separate list as annexure if required )</strong>
+                                                                        </td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                            <br>
+                                                            <br>
+                                                            <tr>
+                                                                <td align="right">Contingency / Miscellaneous <stronger>**</stronger> :</td>
+                                                                <td>Rs. <input id="74" type="number" min="0"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right"><strong>BUDGET TOTAL AMOUNT:  </strong></td>
+                                                                <td>Rs. <input id="75" type="number" min="0"><strong> (Add sr. no. 9 to 15)</strong></td>
+                                                                
+                                                            </tr>
+                                                            <br>
+                                                            <tr>
+                                                                <td align="right"> 
+                                                                    <strong>In case of standardization of new test:</strong>
+                                                                    <br>The expected and actual utilization of the test (per year)
+                                                                </td>
+                                                                <td>
+                                                                    Expected:<input id="76" type="number" min="0">
+                                                                    Actual:<input id="77" type="number" min="0">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right">Remarks of the Investigator (if any):</td>
+                                                                <td><textarea id="78" rows="7" cols="50"></textarea></td>
+                                                            </tr>
+                                                            
+                                                        </td>  
+                                                    </tr>       
+                                                </table>
+                            <table>
+            
+                            </table>
+                          </fieldset>  
+                                <button type="button" onclick="submit()">Submit</button>
+                                <script src="../js/student.js"></script>
+
+        <!--View Project Ends Here-->
+            
+          </div>
+        </div>
+      </div>
+  <!--   Core JS Files   -->
+  <script src="../js/core/jquery.min.js"></script>
+  <script src="../js/core/popper.min.js"></script>
+  <script src="../js/core/bootstrap-material-design.min.js"></script>
+  <script src="../js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="../js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="../js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="../js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="../js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="../js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="../js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="../js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="../js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="../js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="../js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="../js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="../js/plugins/arrive.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="../js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+            $('.fixed-plugin .dropdown').addClass('open');
+          }
+
+        }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+          } else {
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+</body>
+
+
+</html>
+<script>
+
+
+    var param1=new URLSearchParams();
+    param1.append("action","getMaterials");
+    param1.append("studentID","1");
+    var currentFocus;
+    var xhttp1 = new XMLHttpRequest();
+      xhttp1.onreadystatechange = function () {
+    
+            if (this.readyState == 4 && this.status == 200) {
+               var myob = JSON.parse(this.responseText);
+               if(myob.status1=="true")
+               {        console.log("hello");
+                        document.getElementById("22").addEventListener("input",function(event){
+                        var a, b, i, val = this.value;
+                        var self=this;                    
+                        closeAllLists();
+                        if (!val) { return false;}
+                        currentFocus = -1;
+                        a = document.createElement("div");
+                        a.setAttribute("id", this.id + "autocomplete-list");
+                        a.setAttribute("class", "autocomplete-items");
+                        this.parentNode.appendChild(a);
+                        for (i = 0; i < myob.materials.length; i++) {
+                            if (myob.materials[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                                b = document.createElement("div");
+                                b.innerHTML = "<strong>" +myob.materials[i].substr(0, val.length) + "</strong>";
+                                b.innerHTML += myob.materials[i].substr(val.length);
+                                b.innerHTML += "<input type='hidden' value='" + myob.materials[i] + "'>";
+                                b.addEventListener("click", function(e) {
+                                    self.value = this.getElementsByTagName("input")[0].value;
+                                    closeAllLists();
+                                })
+                                a.appendChild(b);
+                        }
+                    }
+                    })
+    
+                    document.getElementById("22").addEventListener("keydown",function(e){
+                        var x = document.getElementById(this.id + "autocomplete-list");
+                        if (x) x = x.getElementsByTagName("div");
+                        if (e.keyCode == 40) {
+                            currentFocus++;
+                            addActive(x);
+                        } else if (e.keyCode == 38) {
+                            currentFocus--;
+                            addActive(x);
+                        } else if (e.keyCode == 13) {
+                            e.preventDefault();
+                            if (currentFocus > -1) {
+                            if (x) x[currentFocus].click();
+                            }
+                        }
+                    })
+               }
+               
+            }
+        }
+    
+        function addActive(x) {
+            if (!x) return false;
+            console.log("Adidas");
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            x[currentFocus].classList.add("autocomplete-active");
+        }
+    
+        function removeActive(x) {
+            for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+            }
+        }
+    
+        function closeAllLists(elmnt) {
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != document.getElementById("22").value) 
+                {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+        
+        document.addEventListener("click",function(event){
+            closeAllLists(event.target);
+        })
+    
+    xhttp1.open("POST","../../Backend/controllers/controller-student.php", true);
+      xhttp1.send(param1);
+    
+    
+    
+    </script>

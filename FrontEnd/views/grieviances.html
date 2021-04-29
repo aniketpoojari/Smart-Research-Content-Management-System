@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grievance</title>
+	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB9o6EtsUEaQGi1khD5sSV3OryIp0zgSFc",
+      authDomain: "one-click-research-solution.firebaseapp.com",
+      databaseURL: "https://one-click-research-solution.firebaseio.com",
+      projectId: "one-click-research-solution",
+      storageBucket: "one-click-research-solution.appspot.com",
+      messagingSenderId: "764441549973"
+    };
+    firebase.initializeApp(config);
+  </script>
+	<!-- Compiled and minified CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script>
+    	document.addEventListener('DOMContentLoaded', function() {
+    	var elems = document.querySelectorAll('select');
+    	var instances = M.FormSelect.init(elems, options);
+  	});
+	</script>
+
+
+
+    <style type="text/css">
+    	.main_body{
+    		
+    	}
+      	.side-panel{
+      		position: fixed;
+      		width:23%;
+      		padding: 0;
+      	}
+      	.card-panel{
+      		padding: 5px 0 5px 0;
+      	}
+        .bluenav{
+            background-color: #1a237e ;
+        }
+    </style>
+</head>
+<body>
+	<div class="navbar-fixed">
+		<nav class="bluenav">
+	    	<div class="nav-wrapper">
+                    <a href="https://www.hindujahospital.com/" target="_blank" class="brand-logo"><div id="logo" ><img id="logoimg" itemprop="logo" src="https://www.hindujahospital.com/images/hinduja-hospital-logo.svg" border="0" alt="P. D. Hinduja Hospital Mumbai" width="275" height="69"></div></a>
+	      		<ul id="nav-mobile" class="right hide-on-med-and-down">
+			        <li><a href="#">Home</a></li>
+			        <li><a href="grievances.html">Grievances</a></li>
+                    <li><a href="forum.html">Forum<span class="new badge green">2 </span></a></li>
+                    <li><a href="#">Notifications<span class="new badge green">4 </span></a></li>
+                    <li><a href="login.html">Logout</a></li>
+	      		</ul>
+	   		</div>
+	    </nav>
+	</div>
+	<div class="row">
+		<div class="heading">
+			<h1>GRIEVANCES</h1>
+		</div>
+	</div>	
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+  });
+
+	document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
+	</script>
+</body>
+</html>
+<script type="text/javascript" src="../js/student.js"></script>

@@ -1,0 +1,65 @@
+<?php
+//$studentID = $_REQUEST['studentID'];
+require_once '../models/model-student.php';
+
+/*$studentID = "ID1";
+$projectname="OneClick Research";
+$budget_proposed=12000;
+$project_ID = 'PD1';*/
+$studentObject = new ModelStudent;
+$action = 'viewProjects';
+if(isset($_REQUEST['action'])){
+
+    switch($_REQUEST['action']){
+
+            case 'addProjects':
+                $projectname = $_REQUEST['projectname'];
+                $derived_from = $_REQUEST['derived_from'];
+                $budget_proposed = $_REQUEST['budget_proposed'];
+                //$studentID,$projectname,$derived_from,$budget_proposed
+                $var = $studentObject->addProjects($studentID,$projectname,$derived_from,$budget_proposed);
+                echo json_encode($var);
+                break;
+
+            case 'viewDocument':
+                $var1 = $studentObject->viewDocuments($studentID);
+                echo json_encode($var1);
+                break;
+
+            case 'viewFinances':
+                $var2= $studentObject->viewFinances($studentID);
+                echo json_encode($var2); 
+                break;
+
+            case 'viewGuides':
+                $var3 = $studentObject->viewGuides($studentID);
+                echo json_encode($var3);
+                break;
+
+            case 'viewStudents':
+                $var4 = $studentObject->viewStudents($studentID);
+                echo json_encode($var4);
+                break;
+
+            case 'viewProjects':
+                $studentID = $_REQUEST['studentID'];
+                $var5 = $studentObject->viewProjects($studentID);
+                echo json_encode($var5);
+                break;
+
+            case 'viewSubmitted':
+                $var6 = $studentObject->viewSubmitted($studentID);
+                echo json_encode($var6);
+                break;
+
+            case 'addDocuments':
+            //$variablePath,$documentDescription,$projectID
+                $variablePath = $_REQUEST['variablePath'];
+                $documentDescription = $_REQUEST['documentDescription'];
+                $projectID = $_REQUEST['projectID'];
+                $var6 = $studentObject->addDocuments($studentID);
+                echo json_encode($var6);
+                break;
+
+    }
+}

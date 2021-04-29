@@ -1,0 +1,85 @@
+.nav-wrapper{
+    background-color: rgb(5, 82, 170)
+}
+#myInput {
+    padding: 20px;
+    margin-top: -6px;
+    border: 0;
+    border-radius: 0;
+    background: #f1f1f1;
+  }
+  .btn{
+      background-color: #75c1f3;
+      
+  }
+  .btn:hover{
+      background-color: rgb(68, 135, 235)
+  }
+  .profile{
+      min-width: 150px;
+      max-width: 250px;
+      height: auto;
+      padding: 20px;
+      overflow: hidden;
+      float: left;
+  }
+  .card{
+      max-width: 500px;
+  }
+.divider{
+    position: fixed;
+}
+#navbar{
+    z-index: 1;
+    display: block;
+}
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.container .section{
+    position: fixed;
+}
+.scroll {
+    max-height: 840px;
+    overflow-y: auto;
+}
+.col-md-6{
+    margin-left: 30px
+}
+  #logoimg{
+    max-width: 230px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -15px;
+    display: block;
+  }
+  .navbar-expand-lg{
+    background-color: #083470
+  }
+  .main_body{
+    		
+  }
+    .side-panel{
+      position: fixed;
+      width:23%;
+    }
+    .bluenav{
+        background-color: #1a237e ;
+    }
+    #menu{
+      font-size: 20px;
+      margin-left: 100px;
+    }
+  .logo{
+    background-color:  #083470;
+    height: 70px;
+  }
+  .card-profile{
+  }
+  .table-responsive{
+    background-color: whitesmoke
+  }

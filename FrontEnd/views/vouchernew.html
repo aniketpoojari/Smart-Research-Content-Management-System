@@ -1,0 +1,228 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB9o6EtsUEaQGi1khD5sSV3OryIp0zgSFc",
+        authDomain: "one-click-research-solution.firebaseapp.com",
+        databaseURL: "https://one-click-research-solution.firebaseio.com",
+        projectId: "one-click-research-solution",
+        storageBucket: "one-click-research-solution.appspot.com",
+        messagingSenderId: "764441549973"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="../js/student.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <style>
+        
+        table{
+            width:100%;
+        }
+        td{
+            text-align: center;
+        }
+        input{
+            background-color: rgb(161, 204, 243);
+            width: 100%;
+        }
+        textarea{
+            background-color: rgb(161, 204, 243);
+        }
+        
+    </style>
+    
+</head>
+<body>
+<div style="text-align:center">
+                <button type="button" id="fillbutt">To Fill</button>
+                
+</div>
+<div id="filldiv" style="display:none">
+<br>
+<form id="firstform">
+        
+        <fieldset>
+            <legend align="center">P.D. Hinduja Hospital & Medical Research Centre</legend>
+            <hr>
+            <legend align="center">Fill the below mentioned details for 100% discount on Investigation of MRC Projects</legend>
+            <hr>
+            <legend align="center" style="color:red">Do not "Cut" & "Paste" the data</legend>
+         
+
+            <table border="1" align="center" cellspacing=2 cellpadding=2>
+                <tr>
+                    <th></th>
+                    <th >Slip Number 1</th>
+                    <th></th>
+                    <th >Slip Number 2</th>
+                </tr>
+                <tr>
+                    <td>Patient Name:</td>
+                    <td ><input id="pat1" type="text"></td>
+                    <td>Patient Name:</td>
+                    <td><input id="pat2" type="text"></td>
+                </tr>
+                <tr>
+                    <td>HH No.</td>
+                    <td><input id="hh1" type="number" min="0"></td>
+                    <td>HH No.</td>
+                    <td><input id="hh2" type="number" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Specify Advise:(Test)</td>
+                    <td></td>
+                    <td>Specify Advise:(Test)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><input id="test11" type="text"></td>
+                    <td>1</td>
+                    <td><input id="test12" type="text"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input id="test21" type="text"></td>
+                    <td>2</td>
+                    <td><input id="test22" type="text"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><input id="test31" type="text"></td>
+                    <td>3</td>
+                    <td><input id="test32" type="text"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><input id="test41" type="text"></td>
+                    <td>4</td>
+                    <td><input id="test42" type="text"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><input id="test51" type="text"></td>
+                    <td>5</td>
+                    <td><input id="test61" type="text"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><input id="test61" type="text"></td>
+                    <td>6</td>
+                    <td><input id="test62" type="text"></td>
+                </tr>
+                <tr>
+                    <td style="height:100; padding: 0">Research Project Name</td>
+                    <td style="height:100;" colspan="100"><textarea style="height:100%; width:100%; text-align: center" ></textarea></td>
+                </tr>
+                <tr>
+                    <td>Project Code Number</td>
+                    <td colspan="3"><input type="text" placeholder="1107-18-AP"></td>
+                </tr>
+                <tr>
+                    <td>Investigator Name</td>
+                    <td colspan="3"><textarea style="height:100%; width:100%; text-align: center" ></textarea></td>
+                </tr>
+            </table>
+
+            <br>
+            <p align="center" style="color:red">Fill the cells highlighted in Blue only & after filling all the details kindly take the printout of worksheet naming "to Print" </p>
+             
+        </fieldset>
+    </form>
+    <div style="text-align:center">
+            <button type="button" id="reset" >Reset</button>
+            <button type="button" id="printprep">Proceed To Print</button>
+    </div>
+</div>
+<br>
+
+<div style="display:none" id="filldiv2">
+    <form id="form2">
+            <fieldset>
+                <legend align="center">P.D. Hinduja Hospital & Medical Research Centre</legend>
+                <hr>
+                <legend align="center">Veer Savarkar Marg, Mahim, Mumbai - 4000016</legend>
+                <br>
+                
+                <table border="1" align="center" cellspacing=2 cellpadding=2>
+                    <tr>
+                        <td >Patient Name:</td>
+                        <td id="patient"><input style="background-color: white" disabled="disabled"></td>
+                    </tr>
+                    <tr>
+                        <td>HH No.</td>
+                        <td><input style="background-color:white" disabled="disabled" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Advise:</td>
+                    </tr>
+                    <tr>
+                        <td>1)<p id="test1"></p></td>
+                        <td>4)<p id="test4"></p></td>
+                    </tr>
+                    <tr>
+                        <td>2)<p id="test2"></p></td>
+                        <td>5)<p id="test5"></p></td>
+                    </tr>
+                    <tr>
+                        <td>3)<p id="test3"></p></td>
+                        <td>6)<p id="test6"></p></td>
+                    </tr>
+                    <tr>
+                        <td style="height:100; padding: 0">Research Project Name</td>
+                        <td style="height:100" colspan="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Project Code Number</td>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td>Investigator Name</td>
+                        <td colspan="3" ><textarea disabled="disabled" style="height:100%; width:100%; text-align: center; background-color: white;"></textarea></td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                <br>
+                <div>
+                    <p>Dr. Alan Almeida</p>
+                    <p>Director Clinical Research</p>
+                </div>
+            
+                <br>
+                
+                <strong><p style="text-decoration:underline" align="center">Kind Attention: Receptionist<br>
+                Please insert the above "Project Code" as it is and initially in the remarks cloumn followed by any other remarks while generating voucher.
+                Please accept Research voucher signed in Blue ink only            </p></strong>
+                        
+                   
+               
+            </fieldset>
+        </form>
+    </div>
+</body>
+<script>
+        document.getElementById("fillbutt").addEventListener("click",function(){
+            document.getElementById("filldiv").setAttribute("style","display:block;");
+        });
+        document.getElementById("reset").addEventListener("click",function(){
+            document.getElementById("firstform").reset();
+            alert('The form will be reset!');
+        });
+        document.getElementById("printprep").addEventListener('click',function(){
+            document.getElementById("filldiv2").setAttribute("style","display:block;");
+            var x = document.getElementById("pat1").innerHTML;
+            console.log(x);
+            document.getElementById("patient").innerHTML=x;
+        });
+
+    </script>
+</html>
